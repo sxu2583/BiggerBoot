@@ -1,0 +1,9 @@
+/*This makes an image become a full background
+  for any container */
+body {
+  background: url("../images/ny.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
