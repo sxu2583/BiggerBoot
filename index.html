@@ -1,135 +1,87 @@
 <!DOCTYPE html>
-<html>
-<!--Add in an affixed sidebar navigation system to your site look at bootstrap tutorials-->
+<html lang="en">
 <head>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
-  <title>Bigger Boot</title>
-  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  .affix {
+      top: 20px;
+  }
+  div.col-sm-9 div {
+      height: 250px;
+      font-size: 28px;
+  }
+  #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {color: #fff; background-color: #00bcd4;}
+  #section42 {color: #fff; background-color: #009688;}
+
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }
+  </style>
 </head>
 
-<header class="container">
-  <h1 class="page-header">This is the bigger boot</h1>
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:220px;">
+  <h1>Insert Cool Picture Here lol</h1>
+  <h3>Fixed vertical sidenav on scroll</h3>
+  <p>Scroll this page to see how the navbar behaves with data-spy="affix" and data-spy="scrollspy".</p>
+  <p>The left menu sticks the page after you have scrolled a specified amount of pixels, and the links in the menu are automatically updated based on scroll position.</p>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section41">Section 4-1</a></li>
+            <li><a href="#section42">Section 4-2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+      <div id="section1">
+        <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section2">
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section3">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section41">
+        <h1>Section 4-1</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section42">
+        <h1>Section 4-2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
-    <button class="btn btn-danger navbar-btn">Button</button>
-  </div>
-</nav>
-</header>
-
-<body>
-
-  <div class="container">
-    <h2>My First Bootstrap Page</h2>
-    <p>This is some text.</p>
-
-    <h2>Now lets try Marking</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At hic maiores aliquam id vero eveniet.<mark>Highlight this freckin beautiful text</mark> Repellat ullam accusantium nobis recusandae, sit, eos minus saepe laudantium voluptate, similique id nostrum earum.</p>
-
-    <h2>Adding Code In</h2>
-    <p>This is code kinda, not <code>span</code>, <code>section</code>, and <code>div</code></p>
-    <p><kbd>Bootstrap is beautiful</kbd></p>
-
-    <h2>Focus</h2>
-    <p class="bg-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita deleniti debitis magni repellat voluptates praesentium labore dignissimos, quis ipsam, aspernatur quas facilis voluptatum esse vero numquam odio, necessitatibus nihil ullam!</p>
-
-    <h2>Tables</h2>
-     <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Don't fall into the well lol so bad</h2>
-  <p class="well">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat itaque facere, amet tempore sit soluta ratione fugiat ullam esse, labore et nam quo sed fugit deserunt in tenetur consequuntur obcaecati.</p>
-
-  <h2>BUUUTTOOONNNSS!!!</h2>
-  <button type="button" class="btn btn-default">Default</button>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-link">Link</button>
-</div>
-
-<section class="container">
-  <h2>Progress Bars</h2>
-  <div class="progress">
-  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
-  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-    40% Complete (success)
   </div>
 </div>
 
-<div class="progress">
-  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
-  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-    50% Complete (info)
-  </div>
-</div>
-
-<div class="progress">
-  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
-  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-    60% Complete (warning)
-  </div>
-</div>
-
-<div class="progress">
-  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-    70% Complete (danger)
-  </div>
-</div>
-</section>
 </body>
-
 </html>
